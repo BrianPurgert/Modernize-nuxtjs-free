@@ -10,8 +10,10 @@ import '@/scss/style.scss';
 import {
   PurpleTheme,
 } from "@/theme/LightTheme";
+import {md3} from "vuetify/blueprints";
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
+    blueprint: md3,
     components,
     directives,
     theme: {
@@ -21,6 +23,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
     },
   });
+
   nuxtApp.vueApp.use(vuetify);
   nuxtApp.vueApp.use(PerfectScrollbar);
   nuxtApp.vueApp.use(VueApexCharts);
